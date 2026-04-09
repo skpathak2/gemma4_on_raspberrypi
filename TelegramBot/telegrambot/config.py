@@ -11,13 +11,10 @@ OLLAMA_BASE_URL: str = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434") #<
 DEFAULT_MODEL: str = os.getenv("OLLAMA_DEFAULT_MODEL", "gemma3:12b")  #<--- Change here your default model
 VISION_MODEL = DEFAULT_MODEL
 
-DEFAULT_SYSTEM_PROMPT: str = (
-    "You are TelegramBot, a helpful assistant running on top of a local model, talking to the user through Telegram API. "
-    "Answer clearly and concisely and respond in Markdown."
-)
+DEFAULT_SYSTEM_PROMPT: str = "You are a helpful, concise assistant. Use Markdown."
 
 now = strftime("%Y-%m-%d", gmtime())
-NOW_PROMPT = (f" Today is: {now} (YYYY-MM-DD). Don't talk about today, but use it for context.")
+NOW_PROMPT = f" Date: {now}."
 DEFAULT_SYSTEM_PROMPT = DEFAULT_SYSTEM_PROMPT + NOW_PROMPT
 
 # Predefined behaviour modes (system prompts)

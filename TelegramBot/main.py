@@ -18,7 +18,15 @@ def main() -> None:
             "Set TELEGRAM_BOT_TOKEN env var or edit BOT_TOKEN in personalbot/config.py."
         )
 
-    application = ApplicationBuilder().token(BOT_TOKEN).build()
+    application = (
+        ApplicationBuilder()
+        .token(BOT_TOKEN)
+        .connect_timeout(300.0)
+        .read_timeout(300.0)
+        .write_timeout(300.0)
+        .pool_timeout(300.0)
+        .build()
+    )
     register_handlers(application)
     application.run_polling()
 

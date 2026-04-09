@@ -60,7 +60,7 @@ def analyze_image_with_ollama(
     if state.config.max_tokens > 0:
         payload["options"]["num_predict"] = state.config.max_tokens
 
-    resp = requests.post(url, json=payload, timeout=120)
+    resp = requests.post(url, json=payload, timeout=300)
     resp.raise_for_status()
     data = resp.json()
     return data["message"]["content"]
