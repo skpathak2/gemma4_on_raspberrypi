@@ -13,6 +13,16 @@ It supports:
 
 By design, **no conversation data is persisted to disk**. When you restart the bot, it forgets everything.
 
+## 📸 Architecture Design
+
+Here is the bot in action running fully locally on a constrained environment:
+
+<p align="center">
+  <img src="images/demo1.png" width="100%" />
+  <img src="images/demo2.png" width="100%" />
+  <img src="images/demo3.png" width="100%" />
+</p>
+
 ---
 
 ## Table of Contents
