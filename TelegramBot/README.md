@@ -56,8 +56,10 @@ High-level:
 - **Telegram** → `python-telegram-bot`
 - **Commands & handlers** → Python modules (`telegrambot/commands.py`, `telegrambot/handlers.py`)
 - **LLM calls** → Ollama REST API (`/api/chat`)
+
+### TBD
 - **Web search** → DDGS (`core/web_tools.py`)
-- **Vision** → Ollama vision models (e.g. `llama3.2-vision`) with base64 images in the `images` field
+- **Vision** → Ollama vision models (e.g. `gemma4:latest`) with base64 images in the `images` field
 
 ---
 
@@ -99,16 +101,17 @@ Example:
 
 ```bash
 # Text only model (you can pick any you like)
-ollama pull llama3:8b
+ollama pull melavisions/gemma4
 
-# Multimodal model (for text/image analysis)
-ollama pull gemma3:4b
+
+# [TBD] Multimodal model (for text/image analysis)
+ollama pull gemma4:latest
 ```
 
 You can browse available models on Ollama’s model library and in the CLI:
 
 ```bash
-ollama list
+ollama ls
 ```
 
 ---
@@ -159,7 +162,7 @@ You can configure TelegramBot via environment variables or by editing `telegramb
 ### Optional
 
 - `OLLAMA_BASE_URL` – defaults to `http://localhost:11434`
-- `OLLAMA_DEFAULT_MODEL` – default text model (e.g. `gemma3:12b`)
+- `OLLAMA_DEFAULT_MODEL` – default text model (e.g. `melavisions/gemma4`)
 
 Example:
 
@@ -167,7 +170,7 @@ Example:
 telegrambot/config.py
 
 TELEGRAM_BOT_TOKEN="1234567890:ABCdefGhIjkLmNoPQRstuVwxyz123456"
-OLLAMA_DEFAULT_MODEL="gemma3:12b"
+OLLAMA_DEFAULT_MODEL="melavisions/gemma4"
 ```
 
 
@@ -344,11 +347,12 @@ The bot will:
 
 **Images not working**
 
-- Confirm that your selected model is a vision-capable model and that you pulled it:
+- Confirm that your selected model is a tool-capable model and that you pulled it:
   ```bash
-  ollama pull gemma3:12b
+  ollama pull melavisions/gemma4
+  ollama ls
   ```
-- Make sure the bot process has permission to write to `PERSONALBOT_DOWNLOAD_DIR`.
+- Make sure the bot process has permission to write to`PERSONALBOT_DOWNLOAD_DIR`.
 
 ---
 
