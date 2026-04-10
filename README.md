@@ -148,7 +148,7 @@ ollama ls
 Clone your fork / this repo and install dependencies:
 
 ```bash
-git clone https://github.com/mlloliveira/telegrambot.git
+git clone https://github.com/skpathak2/gemma4_on_raspberrypi.git
 cd telegrambot
 
 # Optional but recommended:
