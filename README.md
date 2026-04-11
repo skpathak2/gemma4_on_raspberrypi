@@ -1,4 +1,4 @@
-# TelegramBot – Local Ollama + Telegram Chatbot
+# TelegramBot – Local Ollama on Raspberry PI 5
 
 TelegramBot is a Telegram bot that talks to local LLMs via Ollama.  
 It supports:
