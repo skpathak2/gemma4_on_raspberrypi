@@ -179,8 +179,8 @@ Example:
 ```bash
 telegrambot/config.py
 
-TELEGRAM_BOT_TOKEN="1234567890:ABCdefGhIjkLmNoPQRstuVwxyz123456"
-OLLAMA_DEFAULT_MODEL="melavisions/gemma4"
+export TELEGRAM_BOT_TOKEN="1234567890:ABCdefGhIjkLmNoPQRstuVwxyz123456"
+export OLLAMA_DEFAULT_MODEL="melavisions/gemma4"
 ```
 
 
